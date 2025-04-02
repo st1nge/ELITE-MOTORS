@@ -101,7 +101,74 @@
             </div>
         </div>
     </section>
+    <!-- Форма для покупателя -->
+<section class="customer-form-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="form-container">
+                    <h2 class="form-title">ОСТАВЬТЕ ЗАЯВКУ</h2>
+                    <p class="form-subtitle">Мы свяжемся с вами для уточнения деталей</p>
+                    
+                    <form id="customerForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Ваше имя</label>
+                            <input type="text" class="form-control" id="name" required>
+                            <div class="invalid-feedback">Пожалуйста, введите ваше имя</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Электронная почта</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">Пожалуйста, введите корректный email</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Телефон (необязательно)</label>
+                            <input type="tel" class="form-control" id="phone">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Ваш вопрос или комментарий</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="submit" class="btn-submit">Отправить заявку</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<!-- Секция с Google Maps -->
+<section class="map-section py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">МЫ НАХОДИМСЯ</h2>
+        <div class="map-container">
+            <!-- iframe с Google Maps -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.372951144276!2d37.615310315930664!3d55.75179728055308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506f52711!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0JrRgNC10LzQu9GM!5e0!3m2!1sru!2sru!4v1620000000000!5m2!1sru!2sru" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+            
+            <!-- Блок с контактной информацией поверх карты -->
+            <div class="map-info-box">
+                <h4>ELITE MOTORS</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Престижная, 1</p>
+                <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                <p><i class="fas fa-clock"></i> Пн-Пт: 10:00 - 20:00</p>
+                <p><i class="fas fa-car"></i> Парковка для клиентов</p>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Футер -->
     <footer>
         <div class="container">
@@ -119,7 +186,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>© 2023 ELITE MOTORS. Все права защищены</p>
+                <p>© 2025 ELITE MOTORS. Все права защищены</p>
             </div>
         </div>
     </footer>
