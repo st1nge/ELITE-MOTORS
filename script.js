@@ -102,3 +102,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// Обработка формы покупателя
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('customerForm');
+    
+    form.addEventListener('submit', function(event) {
+        if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+        } else {
+            event.preventDefault();
+            // Здесь можно добавить AJAX-отправку или другую логику
+            alert('Спасибо за вашу заявку! Мы свяжемся с вами в ближайшее время.');
+            form.reset();
+            form.classList.remove('was-validated');
+        }
+        
+        form.classList.add('was-validated');
+    }, false);
+});
+
+// Добавьте в script.js
+function initMap() {
+    const location = { lat: 55.751797, lng: 37.615310 }; // Координаты вашего салона
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: location,
+        styles: [
+            // Стили для темной темы карты
+            { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
+            { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
+            { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
+            // ... другие стили
+        ]
+    });
+    new google.maps.Marker({ position: location, map, title: "ELITE MOTORS" });
+}
