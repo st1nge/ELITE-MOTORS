@@ -726,5 +726,157 @@ body {
     margin-bottom: 1.5rem;
     line-height: 1.8;
     font-size: 1.1rem;
+    text-align: left;
 }
 
+/* Стили для формы покупателя */
+.customer-form-section {
+    background: var(--secondary);
+    position: relative;
+}
+
+.form-container {
+    background: var(--dark);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.form-title {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.form-subtitle {
+    color: var(--text);
+    opacity: 0.8;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.form-label {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    color: var(--text);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary);
+    color: var(--text);
+    box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.invalid-feedback {
+    color: #ff6b6b;
+    font-size: 0.85rem;
+}
+
+.btn-submit {
+    background: var(--primary);
+    color: var(--dark);
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover {
+    background: #ffcc00;
+    transform: translateY(-2px);
+}
+
+/* Валидация формы */
+.was-validated .form-control:invalid {
+    border-color: #ff6b6b;
+}
+
+.was-validated .form-control:valid {
+    border-color: #51cf66;
+}
+
+/* Стили для секции с картой */
+.map-section {
+    background: var(--dark);
+    position: relative;
+}
+
+.map-container {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+}
+
+.map-info-box {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: rgba(13, 13, 13, 0.9);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--primary);
+    max-width: 250px;
+}
+
+.map-info-box h4 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.map-info-box p {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.map-info-box i {
+    color: var(--primary);
+    width: 20px;
+    text-align: center;
+}
+
+/* Адаптивность для карты */
+@media (max-width: 768px) {
+    .map-info-box {
+        position: static;
+        max-width: 100%;
+        margin-top: -5px; /* Убираем зазор между картой и блоком */
+        border-radius: 0 0 15px 15px;
+    }
+    
+    .map-container iframe {
+        height: 350px;
+    }
+}
